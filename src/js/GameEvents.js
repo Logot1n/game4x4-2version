@@ -51,11 +51,11 @@ export default class GameEvents {
     }, 1000);
   }
 
-  addCellClickListener(callback) {
+  addCellClickListener(callback) { // Добавление в массив cellClickListeners callback-функции
     this.cellClickListeners.push(callback);
   }
 
-  onCellClick(event) {
+  onCellClick(event) { // Используется для обработки клика на кликнотую ячейку и вызова всех callback-функций из массива cellClickListeners
     const index = this.cells.indexOf(event.currentTarget);
     this.cellClickListeners.forEach((o) => o.call(null, index));
   }

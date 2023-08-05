@@ -25,18 +25,18 @@ export default class GameController { // Класс отвечающий за к
     this.gameStatus();
   }
 
-  characterClick() {
+  characterClick() { // Вызываем массив cellClickListeners и добавляем обработчик события на ячейку
     this.gameEvents.addCellClickListener(this.onCellClick.bind(this));
   }
 
-  gameStatus() {
+  gameStatus() { // Статус игры
     const clickerWin = document.querySelector('.clicker_counter-win');
     const clickerLose = document.querySelector('.clicker_counter-lose');
     if (clickerWin.textContent === '5') {
       clickerWin.textContent = '0';
       clickerLose.textContent = '0';
       alert('Вы победили!');
-    } else if (clickerLose.textContent === '3') {
+    } else if (clickerLose.textContent === '5') {
       clickerWin.textContent = '0';
       clickerLose.textContent = '0';
       alert('Вы проиграли!');

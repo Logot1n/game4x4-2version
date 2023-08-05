@@ -25,6 +25,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+    cursor: url('../images/Diamond-Sword-Transparent.png'), auto;
 }
 
 .cell {
